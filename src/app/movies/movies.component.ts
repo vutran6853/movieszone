@@ -10,18 +10,24 @@ import { Observable } from 'rxjs'; //// <-- return data from API in json format
 })
 
 export class MoviesComponent implements OnInit {
-
+  ////  def your var local state
   users$: Object;
-
+  error: any;
 
   constructor(
     private data: DataService
   ) { }
 
-    //// LifeCycle Hook in Angular 
+  //// LifeCycle Hook 
   ngOnInit() {
-    this.data.getUser().subscribe(data => this.users$ = data)
-
+    this.data.getUser()
+    .subscribe((response) => {
+      console.log(response)
+      this.users$ = response
+      
+    });
+    
   }
-
+  
+  
 }
