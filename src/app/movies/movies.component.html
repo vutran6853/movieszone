@@ -1,3 +1,10 @@
-<p>
-  movies works!
-</p>
+<div>
+    <p>Movies List</p>
+
+    <div *ngFor="let movies of nowPlayingMovies$" class="moviesBox">
+      <p>{{ movies.title }}</p>
+      <img src='https://image.tmdb.org/t/p/w500{{ movies.poster_path }}' /> 
+      <p>Rate: {{ movies.vote_average }}</p>
+    </div>
+
+</div>

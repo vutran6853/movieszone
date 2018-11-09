@@ -8,18 +8,20 @@ import { MoviesComponent } from './movies/movies.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
+
+//// declara for View 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     MoviesComponent
   ],
-  imports: [
+  imports: [                  
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent]  //// Entry point of app
 })
 export class AppModule { }

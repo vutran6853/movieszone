@@ -1,1 +1,1 @@
-Web App for MoviesZone. Build with Angular
+Web App for movieszone. Build in Angular
