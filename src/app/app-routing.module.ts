@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MoviesComponent } from './movies/movies.component';
-import { GenresComponent } from './genres/genres.component';
-
 import { from } from 'rxjs';
+import { MoviesComponent } from './component/movies/movies.component';
+import { GenresComponent } from './component/genres/genres.component';
+import { MovieinfoComponent } from './component/movieinfo/movieinfo.component';
+import { StatsComponent } from './component/stats/stats.component';
+
 
 //// Route to your component
 const routes: Routes = [
@@ -14,6 +16,14 @@ const routes: Routes = [
   {
     path: 'genres',
     component: GenresComponent
+  },
+  {
+    path: 'movies/:id',
+    component: MovieinfoComponent
+  },
+  {
+    path: 'stats',
+    component: StatsComponent
   }
 ];
 

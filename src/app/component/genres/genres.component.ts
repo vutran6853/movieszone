@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';  //// http request 
+import { DataService } from '../../data.service';  //// http request 
 import { Observable } from 'rxjs';  //// <-- return data from API in json format
 
 
@@ -13,6 +13,7 @@ export class GenresComponent implements OnInit {
   ////  def your var local state
   public genresList: any;
   public selectGenresID: Number;
+  public newGenresList: any;
 
 
   constructor(
@@ -22,21 +23,32 @@ export class GenresComponent implements OnInit {
   ngOnInit() {
     this.data.getGenresList()
     .subscribe((response) => {
-      console.log(response.genres)
+      // console.log(response.genres)
       this.genresList = response.genres
     });
 
   }
 
   handleSelectGenres(id) {
-    console.log(`id: ${ id }`);
+    // console.log(`id: ${ id }`);
     this.selectGenresID = id
     console.log('selectGenresID:', this.selectGenresID);
 
   }
 
-  handleOnClick(genres, e) {
-
-    console.log('::', genres);
+  ////  Get new Genres list by select item
+  handleOnClick() {
+    // console.log(this.selectGenresID);
+    this.data.getGenresListByID(this.selectGenresID)
+    .subscribe((response) => {
+      console.log(response.results)
+      this.newGenresList = response.results;
+    });
   }
+
+  handleMoreInfo(id) {
+    // console.log(`id: ${ id }`);
+    this.data.postGenresByID(id)
+  }
+
 }

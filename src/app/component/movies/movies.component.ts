@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service'; //// http request 
+import { DataService } from '../../data.service'; //// http request 
 import { Observable } from 'rxjs'; //// <-- return data from API in json format
-
 
 @Component({
   selector: 'app-movies',
@@ -13,6 +12,7 @@ export class MoviesComponent implements OnInit {
   ////  def your var local state
   nowPlayingMovies$: any;
   response: any;
+  results: Object;
   error: any;
   constructor(
     private data: DataService  //// http response data
@@ -23,10 +23,18 @@ export class MoviesComponent implements OnInit {
   ngOnInit() {
     this.data.getNowPlayingMoviesList()
     .subscribe((response) => {
-      console.log(response.results)
-      this.nowPlayingMovies$ = response.results
+      console.log(response)
+    return this.nowPlayingMovies$ = response.results
     });
-
+    console.log(this);
   }
+
+  handleMoreInfo(id) {
+    // console.log(`id: ${ id }`);
+    this.data.postGenresByID(id)
+  }
+  
 }
+
+
 

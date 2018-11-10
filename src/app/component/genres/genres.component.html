@@ -1,0 +1,21 @@
+<div>
+
+  
+    <div>
+      <select #selectId (change)='handleSelectGenres(selectId.value)'>
+        <option *ngFor='let genres of genresList'  
+                [value]='genres.id'>{{ genres.name }}</option>
+      </select>
+      <button (click)='handleOnClick()'>Submit</button>  
+    </div>
+
+    <div *ngFor='let movies of newGenresList' class="moviesBox">
+      <p>{{ movies.title }}</p>
+      <img src='https://image.tmdb.org/t/p/w500{{ movies.poster_path }}' /> 
+      <p>Rate: {{ movies.vote_average }}</p>
+      <a routerLink='/movies/:{{ movies.id }}'>
+          <button (click)='handleMoreInfo(movies.id)' >More Info</button>
+      </a>
+    </div>
+
+</div>

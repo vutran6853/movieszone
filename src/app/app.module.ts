@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { MoviesComponent } from './movies/movies.component';
-
 import { HttpClientModule } from '@angular/common/http';
-import { GenresComponent } from './genres/genres.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { MoviesComponent } from './component/movies/movies.component';
+import { GenresComponent } from './component/genres/genres.component';
+import { MovieinfoComponent } from './component/movieinfo/movieinfo.component';
+import { StatsComponent } from './component/stats/stats.component';
+
 
 
 //// declara for View 
@@ -16,7 +18,9 @@ import { GenresComponent } from './genres/genres.component';
     AppComponent,
     NavbarComponent,
     MoviesComponent,
-    GenresComponent
+    GenresComponent,
+    MovieinfoComponent,
+    StatsComponent
   ],
   imports: [                  
     BrowserModule,

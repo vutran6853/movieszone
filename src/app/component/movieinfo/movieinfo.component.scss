@@ -1,0 +1,18 @@
+$borderColor: 1px solid red;
+$imgHeight: 50%;
+$imgWidth: 50%;
+
+.moviesBox {
+
+  img {
+    border: 5px solid black;
+    height: $imgHeight;
+    width: $imgWidth;
+    margin-left: 45px
+  }
+
+  p {
+    border: $borderColor
+  }
+
+}
