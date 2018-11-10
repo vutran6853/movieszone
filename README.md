@@ -1,1 +1,1 @@
-Web App for movieszone. Build in Angular
+Web App for movieszone. Build in Angular + TypeScript
