@@ -20,4 +20,8 @@ export class DataService {
     return this.http.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${ this.API_KEY }&language=en-US&page=1`)
   }
 
+  getGenresList() {
+    return this.http.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${ this.API_KEY }&language=en-US`)
+  }
+
 }

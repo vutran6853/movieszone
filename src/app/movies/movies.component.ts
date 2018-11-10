@@ -12,10 +12,11 @@ import { Observable } from 'rxjs'; //// <-- return data from API in json format
 export class MoviesComponent implements OnInit {
   ////  def your var local state
   nowPlayingMovies$: any;
+  response: any;
   error: any;
   constructor(
-    private data: DataService
-    
+    private data: DataService  //// http response data
+
   ) { }
 
   //// LifeCycle Hook 
@@ -25,6 +26,7 @@ export class MoviesComponent implements OnInit {
       console.log(response.results)
       this.nowPlayingMovies$ = response.results
     });
+
   }
-  
 }
+

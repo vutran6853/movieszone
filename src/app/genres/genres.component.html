@@ -1,0 +1,14 @@
+<div>
+
+  
+    <div>
+      <select #selectId (change)='handleSelectGenres(selectId.value)'>
+        <option *ngFor="let genres of genresList"  
+                [value]="genres.id">{{ genres.name }}</option>
+      </select>
+      <button (click)='handleOnClick(genres)'>Submit</button>  
+    </div>
+    
+
+
+</div>

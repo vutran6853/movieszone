@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MoviesComponent } from './movies/movies.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { GenresComponent } from './genres/genres.component';
 
 
 //// declara for View 
@@ -14,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     NavbarComponent,
-    MoviesComponent
+    MoviesComponent,
+    GenresComponent
   ],
   imports: [                  
     BrowserModule,
