@@ -1,22 +1,40 @@
-$borderColor: 1px solid red;
-$imgHeight: 50%;
-$imgWidth: 50%;
+$borderColor: 1px solid lightblue;
+$imgHeight: 100px;
+$imgWidth: 100px;
+
+.box1 {
+  .headlineTitle {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+}
 
 .moviesBox {
   border: $borderColor;
+  display: grid;
+  grid-row: auto;
   height: 200px;
   width: 200px;
   float: left;
+  margin-left: 50px;
+  margin-bottom: 10px;
 
   p {
-    margin-left: 55px
+    margin-left: 50px;
   }
 
   img {
-    border: 5px solid black;
+    border: 1px solid white;
     height: $imgHeight;
     width: $imgWidth;
     margin-left: 45px
+  }
+
+
+
+  button {
+    border: $borderColor;
+    margin-left: 60px;
   }
 
 }

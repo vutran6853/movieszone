@@ -1,13 +1,12 @@
-<div>
-    <p>Movies List</p>
+<div class="box1">
+    <p class="headlineTitle">Movies List</p>
 
-    <div *ngFor="let movies of nowPlayingMovies$" class="moviesBox">
+    <div class="moviesBox" *ngFor="let movies of nowPlayingMovies$" >
       <p>{{ movies.title }}</p>
       <img src='https://image.tmdb.org/t/p/w500{{ movies.poster_path }}' /> 
-      <p>Rate: {{ movies.vote_average }}</p>
       <a routerLink='/movies/:{{ movies.id }}'>
         <button (click)='handleMoreInfo(movies.id)' >More Info</button>
-    </a>
+      </a>
     </div>
 
 </div>

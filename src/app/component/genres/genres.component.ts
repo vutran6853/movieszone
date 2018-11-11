@@ -26,14 +26,11 @@ export class GenresComponent implements OnInit {
       // console.log(response.genres)
       this.genresList = response.genres
     });
-
   }
 
   handleSelectGenres(id) {
     // console.log(`id: ${ id }`);
     this.selectGenresID = id
-    console.log('selectGenresID:', this.selectGenresID);
-
   }
 
   ////  Get new Genres list by select item
@@ -41,11 +38,12 @@ export class GenresComponent implements OnInit {
     // console.log(this.selectGenresID);
     this.data.getGenresListByID(this.selectGenresID)
     .subscribe((response) => {
-      console.log(response.results)
+      // console.log(response.results)
       this.newGenresList = response.results;
     });
   }
 
+  //// get select movies by ID
   handleMoreInfo(id) {
     // console.log(`id: ${ id }`);
     this.data.postGenresByID(id)

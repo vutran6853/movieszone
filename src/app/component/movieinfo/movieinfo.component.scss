@@ -1,14 +1,19 @@
-$borderColor: 1px solid red;
+$borderColor: 1px solid lightblue;
 $imgHeight: 50%;
 $imgWidth: 50%;
 
 .moviesBox {
+  .headlineTitle {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
 
   img {
-    border: 5px solid black;
+    border: 1px solid white;
     height: $imgHeight;
     width: $imgWidth;
-    margin-left: 45px
+    margin-left: 100px;
+    
   }
 
   p {

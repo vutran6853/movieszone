@@ -23,17 +23,16 @@ export class MoviesComponent implements OnInit {
   ngOnInit() {
     this.data.getNowPlayingMoviesList()
     .subscribe((response) => {
-      console.log(response)
-    return this.nowPlayingMovies$ = response.results
+      // console.log(response)
+    this.nowPlayingMovies$ = response.results
     });
-    console.log(this);
   }
 
   handleMoreInfo(id) {
     // console.log(`id: ${ id }`);
     this.data.postGenresByID(id)
   }
-  
+
 }
 
 
